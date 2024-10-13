@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="by Shivin Dass, Jiaheng Hu, Ben Abbatematteo, Peter Stone, Roberto Martín-Martín">
+  <meta property="og:title" content="Learning to Look: Seeking information to Act via Policy Factorization"/>
+  <meta property="og:description" content="Learning to Look: Seeking information to Act via Policy Factorization"/>
+  <meta property="og:url" content="https://robin-lab.cs.utexas.edu/learning2look/"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <!-- <meta property="og:image" content="static/images/telemoma_architecture.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/> -->
+
+
+  <meta name="twitter:title" content="Learning to Look: Seeking information to Act via Policy Factorization">
+  <meta name="twitter:description" content="Learning to Look: Seeking information to Act via Policy Factorization">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <!-- <meta name="twitter:image" content="https://robin-lab.cs.utexas.edu/telemoma-web/static/images/telemoma_architecture.png">
+  <meta name="twitter:card" content="summary_large_image"> -->
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Robotics, Active Vision, Interactive Perception">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Learning to Look</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title"><span style="color:#A52B16; font-weight: bold;">Learning to Look</span> &#x1F440;</h1>
+            <h2 class="subtitle is-2 publication-subtitle">Seeking information to Act via Policy Factorization</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://shivindass.github.io/" target="_blank">Shivin Dass</a><sup>1</sup>,</span>
+                <a href="https://jiahenghu.github.io/" target="_blank">Jiaheng Hu</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://babbatem.github.io/" target="_blank">Ben Abbatematteo</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://www.cs.utexas.edu/~pstone/" target="_blank">Peter Stone</a><sup>1,2</sup>,</span>
+              <span class="author-block">
+                <a href="https://robertomartinmartin.com/" target="_blank">Roberto Martín-Martín</a><sup>1</sup></span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>The University of Texas at Austin, <sup>2</sup>Sony AI
+                <!-- <br>Conferance name and year -->
+              </span>
+              <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                    <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Coming Soon!)</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <!-- <span class="link-block">
+                  <a href="" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                  </a> -->
+                <!-- </span> -->
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<!-- <section class="hero teaser">
+  <div class="container">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <source src="static/videos/teaser_vid.mp4"
+        type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section> -->
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Many robot tasks require active or interactive exploration behavior in
+            order to be performed successfully. Such tasks are ubiquitous in embodied do-
+            mains, where agents must actively search for the information necessary for each
+            stage of a task, e.g., moving the head of the robot to find information relevant
+            to manipulation, or in multi-robot domains, where one scout robot may search
+            for the information that another robot needs to make informed decisions. We
+            identify these tasks with a new type of problem, factorized Contextual Markov
+            Decision Processes, and propose DISaM, a dual-policy solution composed of an
+            information-seeking policy that explores the environment to find the relevant con-
+            textual information and an information-receiving policy that exploits the context
+            to achieve the manipulation goal. This factorization allows us to train both poli-
+            cies separately, using the information-receiving one to provide reward to train the
+            information-seeking policy. At test time, the dual agent balances exploration and
+            exploitation based on the uncertainty the manipulation policy has on what the next
+            best action is. We demonstrate the capabilities of our dual policy solution in five
+            manipulation tasks that require information-seeking behaviors, both in simulation
+            and in the real-world, where DISaM significantly outperforms existing methods.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Youtube video -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3" style="text-align: center;">Video</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/7z6L_AGae6g" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End youtube video -->
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2" style="text-align: center;">Overview</h2>
+    <div class="columns is-centered">
+      <div class="column is-four-fifths is-centered has-text-centered">
+        <div class="content has-text-justified">
+          <p>
+            Traditionally, task conditioned robot polcies assume access to all information about the task such as the 
+            reward function being optimized but intelligent agents such as humans know how to look for important information 
+            in their surroundings and take relevant actions based on the context. For example, when given the task of serving 
+            a beverage, looking at the time of day can inform the agent what to serve. 
+          </p>
+        </div>
+        <!-- Your image here -->
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <video poster="" id="tree" autoplay controls muted loop height="60%">
+              <source src="static/videos/teaser_vid.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2" style="text-align: center;">Method</h2>
+    <div class="columns is-centered">
+      <div class="column is-four-fifths is-centered has-text-centered">
+        <div class="content has-text-justified">
+          <p>
+            In this work we factorize the problem of looking for information and acting as 
+            information-seeking (IS) and information-receiving (IR) respectively, where we train
+            the IS agent to "look" for relevant task context and IR to act to complete the task. 
+            Our method, DISaM (Dual Information-Seeking And Manipulation), splits the training into
+            two phases -- In Phase 1, we learn the IR policy that takes in ground-truth context 
+            information and controls the movement of the robot. In Phase 2, we learn an IS policy 
+            as well as an image encoder such that the context can be correctly reconstructed from 
+            the camera observation. Once all parts are trained, together they create a system that 
+            takes in image observations and controls both the robot and the camera.
+          </p>
+        </div>
+        <img src="static/images/training_loop.png" alt="Dual training framework" width="80%"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2" style="text-align: center;">Policy Rollouts</h2>
+    <div class="columns is-centered">
+      <div class="column is-four-fifths is-centered has-text-centered">
+        <div class="content has-text-justified">
+          <p>
+            Below we visualize the rollouts of the learnt IS and IR policy on the tasks we discuss in the paper. The left frame corresponds to the the IS agent's observations and the right frame is a task visualization.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Cooking -->
+    <div class="columns is-centered">
+      <div class="column is-one-third">
+        <img src="static/images/task_gifs/cooking_1.gif" alt="cooking_1" width="90%"/>
+      </div>
+      <div class="column is-one-third">
+        <img src="static/images/task_gifs/cooking_2.gif" alt="cooking_2" width="90%"/>
+        <h4 class="title is-4" style="text-align: center;">Cooking</h3><br>
+      </div>
+      <div class="column is-one-third">
+        <img src="static/images/task_gifs/cooking_3.gif" alt="cooking_3" width="90%"/>
+      </div>
+    </div>
+
+    <!-- Walls -->
+    <div class="columns is-centered">
+      <div class="column is-one-third">
+        <img src="static/images/task_gifs/walls_1.gif" alt="walls_1" width="90%"/>
+      </div>
+      <div class="column is-one-third">
+        <img src="static/images/task_gifs/walls_2.gif" alt="walls_2" width="90%"/>
+        <h4 class="title is-4" style="text-align: center;">Walls</h3><br>
+      </div>
+      <div class="column is-one-third">
+        <img src="static/images/task_gifs/walls_3.gif" alt="walls_3" width="90%"/>
+      </div>
+    </div>
+
+    <!-- Assembly -->
+    <div class="columns is-centered">
+      <div class="column is-one-third">
+        <img src="static/images/task_gifs/assembly_1.gif" alt="assembly_1" width="90%"/>
+      </div>
+      <div class="column is-one-third">
+        <img src="static/images/task_gifs/assembly_2.gif" alt="assembly_2" width="90%"/>
+        <h4 class="title is-4" style="text-align: center;">Assembly</h3><br>
+      </div>
+      <div class="column is-one-third">
+        <img src="static/images/task_gifs/assembly_3.gif" alt="assembly_3" width="90%"/>
+      </div>
+    </div>
+
+    <!-- Real -->
+    <div class="columns is-centered">
+      <div class="column is-one-third">
+        <div class="columns is-centered">
+         <img src="static/images/task_gifs/real_button.gif" alt="button_1" width="75%"/>
+        </div>
+        <h4 class="title is-4" style="text-align: center;">Button</h3>
+      </div>
+      <div class="column is-one-third">
+        <img src="static/images/task_gifs/real_clock.gif" alt="clock_1" width="90%"/>
+        <h4 class="title is-4" style="text-align: center;">Teatime (Clock)</h3>
+      </div>
+      <div class="column is-one-third">
+        <img src="static/images/task_gifs/real_person.gif" alt="person_1" width="90%"/>
+        <h4 class="title is-4" style="text-align: center;">Teatime (Person)</h3>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- <section class="section">
+  <div class="container" style="width: 70%;">
+    <h2 class="title is-2" style="text-align: center;">Autonomous Policy Rollouts</h2>
+    <div class="columns is-centered">
+      <div class="column">
+        <video poster="" id="video2" autoplay controls muted loop height="100%" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;">
+          <source src="static/videos/il/serve_bread_no_border.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+      <div class="column">
+        <video poster="" id="video3" autoplay controls muted loop height="100%" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;">
+          <source src="static/videos/il/cover_table_no_border.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+      <div class="column">
+        <video poster="" id="video3" autoplay controls muted loop height="100%" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;">
+          <source src="static/videos/il/slide_chair_no_border.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!--BibTex citation -->
+  <!-- <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+      @article{dass2024telemoma,
+        title={TeleMoMa: A Modular and Versatile Teleoperation System for Mobile Manipulation},
+        author={Dass, Shivin and Ai, Wensi and Jiang, Yuqian and Singh, Samik and Hu, Jiaheng and Zhang, Ruohan and Stone, Peter and Abbatematteo, Ben and Martín-Martín, Roberto},
+        journal={arXiv preprint arXiv:2403.07869},
+        year={2024}
+      }
+      </code></pre>
+    </div>
+</section> -->
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
