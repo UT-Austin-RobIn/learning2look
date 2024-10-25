@@ -78,7 +78,7 @@
               <div class="publication-links">
                     <!-- Arxiv PDF link -->
                 <span class="link-block">
-                  <a href="" target="_blank"
+                  <a href="http://arxiv.org/abs/2410.18964" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="fas fa-file-pdf"></i>
@@ -210,7 +210,7 @@
 
 <section class="section">
   <div class="container">
-    <h2 class="title is-2" style="text-align: center;">Method</h2>
+    <h2 class="title is-2" style="text-align: center;">DISaM Training</h2>
     <div class="columns is-centered">
       <div class="column is-four-fifths is-centered has-text-centered">
         <div class="content has-text-justified">
@@ -226,21 +226,147 @@
             takes in image observations and controls both the robot and the camera.
           </p>
         </div>
-        <img src="static/images/training_loop.png" alt="Dual training framework" width="80%"/>
+        <video poster="" id="tree" autoplay controls muted loop height="100%">
+          <source src="static/videos/disam_training.mp4"
+          type="video/mp4">
+        </video>
       </div>
     </div>
   </div>
 </section>
 
-
 <section class="section">
   <div class="container">
-    <h2 class="title is-2" style="text-align: center;">Policy Rollouts</h2>
+    <h2 class="title is-2" style="text-align: center;">DISaM Deployment</h2>
     <div class="columns is-centered">
       <div class="column is-four-fifths is-centered has-text-centered">
         <div class="content has-text-justified">
           <p>
-            Below we visualize the rollouts of the learnt IS and IR policy on the tasks we discuss in the paper. The left frame corresponds to the the IS agent's observations and the right frame is a task visualization.
+            During deployment, DISaM calculates the uncertainty of the IR policy over the next action by conditioning it on several contexts
+            generated with the Encoder. If the uncertainty of the IR policy is high (above a threshold) then information-seeking actions are taken by the IS
+            policy. When the correct context has been found by the IS policy, the IR uncertainty over the next action falls below the threshold
+            and DISaM takes the IR actions to complete the task.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-three-fifths is-centered has-text-centered">
+          <video poster="" id="tree" autoplay controls muted loop height="100%">
+            <source src="static/videos/deployment.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+  </div>
+</section>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2" style="text-align: center;">Annotated Rollouts</h2>
+        <div class="content has-text-justified">
+          <p>
+            Following videos demonstrate how the control is switched between the Information-Seeking (IS) and Information-Receiving (IR)
+            agents. The text on top is semantic representation of the information that IR is uncertain about and we annotate the image 
+            when IS is able to find that information. 
+          </p>
+        </div>
+        <div class="grid-contrainer-one-no-box">
+          <div class="grid-item">
+              <div class="card-static-container">
+                <div class="card-container">
+                  <div class="card-wide">
+                    <div class="card-content">
+                      <h3><strong>Task: </strong>Cooking a dish</h3>
+                      <video poster="" id="tree" autoplay controls muted loop height="100%">
+                        <source src="static/videos/annotated_rollouts/cooking.mp4"
+                        type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-container">
+                  <div class="card-wide">
+                    <div class="card-content">
+                      <h3><strong>Task: </strong>Pick and place</h3>
+                      <video poster="" id="tree" autoplay controls muted loop height="100%">
+                        <source src="static/videos/annotated_rollouts/walls.mp4"
+                        type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-container">
+                  <div class="card-wide">
+                    <div class="card-content">
+                      <h3><strong>Task: </strong>Assemble the correct peg</h3>
+                      <video poster="" id="tree" autoplay controls muted loop height="100%">
+                        <source src="static/videos/annotated_rollouts/assembly.mp4"
+                        type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-container">
+                  <div class="card-wide">
+                    <div class="card-content">
+                      <h3><strong>Task: </strong>Choosing a beverage</h3>
+                      <video poster="" id="tree" autoplay controls muted loop height="100%">
+                        <source src="static/videos/annotated_rollouts/clock.mp4"
+                        type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-container">
+                  <div class="card-wide">
+                    <div class="card-content">
+                      <h3><strong>Task: </strong>Serving a beverage</h3>
+                      <video poster="" id="tree" autoplay controls muted loop height="100%">
+                        <source src="static/videos/annotated_rollouts/person.mp4"
+                        type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-container">
+                  <div class="card-wide">
+                    <div class="card-content">
+                      <h3><strong>Task: </strong>Pick fruit based on recipe</h3>
+                      <video poster="" id="tree" autoplay controls muted loop height="100%">
+                        <source src="static/videos/annotated_rollouts/button.mp4"
+                        type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2" style="text-align: center;">More Simulation Rollouts</h2>
+    <div class="columns is-centered">
+      <div class="column is-four-fifths is-centered has-text-centered">
+        <div class="content has-text-justified">
+          <p>
+            Below we provide more rollouts in the simulation environments to demonstrate the variety of behaviors IS policy learns. 
+            The left frame corresponds to the the IS agent's observations and the right frame is a task visualization.
           </p>
         </div>
       </div>
@@ -288,7 +414,7 @@
     </div>
 
     <!-- Real -->
-    <div class="columns is-centered">
+    <!-- <div class="columns is-centered">
       <div class="column is-one-third">
         <div class="columns is-centered">
          <img src="static/images/task_gifs/real_button.gif" alt="button_1" width="75%"/>
@@ -303,7 +429,7 @@
         <img src="static/images/task_gifs/real_person.gif" alt="person_1" width="90%"/>
         <h4 class="title is-4" style="text-align: center;">Teatime (Person)</h3>
       </div>
-    </div>
+    </div> -->
 
   </div>
 </section>
